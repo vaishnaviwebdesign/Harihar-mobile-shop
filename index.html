@@ -8,453 +8,586 @@
 
 <style>
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#f5f8fb;
-    color:#173b59;
+font-family:Arial,sans-serif;
+background:#f5f8fa;
+color:#183b56;
 }
 
 nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#ffffff;
-    padding:15px 6%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    box-shadow:0 3px 15px rgba(0,0,0,0.08);
+position:sticky;
+top:0;
+z-index:1000;
+background:white;
+padding:16px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 3px 18px rgba(0,0,0,.08);
 }
 
 .logo{
-    font-size:23px;
-    font-weight:bold;
-    color:#075985;
+font-size:21px;
+font-weight:bold;
+color:#075985;
 }
 
 nav a{
-    text-decoration:none;
-    color:#173b59;
-    margin-left:18px;
-    font-weight:600;
+text-decoration:none;
+color:#183b56;
+margin-left:18px;
+font-weight:bold;
 }
 
 .hero{
-    min-height:620px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:70px 20px;
-    background:linear-gradient(135deg,#075985,#1682ad);
-    color:white;
+min-height:650px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:70px 20px;
+background:
+radial-gradient(circle at top,#35a9d0,#075985 55%,#063b57);
+color:white;
 }
 
 .hero-content{
-    max-width:800px;
+max-width:850px;
 }
 
-.glasses{
-    font-size:70px;
-    margin-bottom:15px;
+.hero-icon{
+font-size:80px;
+margin-bottom:15px;
 }
 
 .hero h1{
-    font-size:54px;
-    line-height:1.1;
-    margin-bottom:18px;
+font-size:55px;
+margin-bottom:15px;
+}
+
+.hero h2{
+font-size:25px;
+font-weight:normal;
+margin-bottom:15px;
 }
 
 .hero p{
-    font-size:24px;
-    margin-bottom:35px;
+font-size:18px;
+line-height:1.7;
+opacity:.95;
+margin-bottom:30px;
 }
 
 .btn{
-    display:inline-block;
-    padding:16px 30px;
-    margin:8px;
-    border-radius:35px;
-    background:white;
-    color:#075985;
-    text-decoration:none;
-    font-size:17px;
-    font-weight:bold;
-    box-shadow:0 8px 20px rgba(0,0,0,0.15);
-    transition:0.3s;
+display:inline-block;
+padding:15px 28px;
+margin:7px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+background:white;
+color:#075985;
+transition:.3s;
 }
 
 .btn:hover{
-    transform:translateY(-3px);
+transform:translateY(-4px);
 }
 
 .btn.dark{
-    background:#063b57;
-    color:white;
+background:#062f47;
+color:white;
 }
 
 section{
-    padding:80px 6%;
+padding:80px 6%;
 }
 
-.section-title{
-    text-align:center;
-    font-size:42px;
-    margin-bottom:45px;
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:45px;
 }
 
 .about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-    font-size:20px;
-    line-height:1.8;
-    color:#555;
+max-width:850px;
+margin:auto;
+text-align:center;
+font-size:19px;
+line-height:1.8;
+color:#555;
 }
 
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:28px;
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:28px;
+max-width:1100px;
+margin:auto;
 }
 
-.card{
-    background:white;
-    padding:45px 25px;
-    border-radius:28px;
-    text-align:center;
-    box-shadow:0 12px 30px rgba(0,0,0,0.08);
-    transition:0.3s;
+.product{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.09);
+transition:.3s;
 }
 
-.card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 18px 35px rgba(0,0,0,0.13);
+.product:hover{
+transform:translateY(-8px);
+box-shadow:0 18px 38px rgba(0,0,0,.14);
 }
 
-.card-icon{
-    font-size:60px;
-    margin-bottom:20px;
+.product-image{
+height:210px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:95px;
+background:linear-gradient(135deg,#e8f7fc,#c9eaf5);
 }
 
-.card h3{
-    font-size:28px;
-    margin-bottom:15px;
+.product-info{
+padding:28px 22px;
+text-align:center;
 }
 
-.card p{
-    font-size:17px;
-    color:#666;
-    line-height:1.6;
+.product h3{
+font-size:25px;
+margin-bottom:12px;
+}
+
+.product p{
+color:#666;
+line-height:1.6;
+margin-bottom:18px;
+}
+
+.small-btn{
+display:inline-block;
+padding:11px 20px;
+border-radius:25px;
+background:#075985;
+color:white;
+text-decoration:none;
+font-weight:bold;
 }
 
 .services{
-    background:#eef5f9;
+background:#eaf3f7;
+}
+
+.service{
+background:white;
+padding:35px 22px;
+border-radius:23px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.service-icon{
+font-size:55px;
+margin-bottom:18px;
+}
+
+.service h3{
+font-size:23px;
+margin-bottom:10px;
+}
+
+.service p{
+color:#666;
+line-height:1.6;
+}
+
+.location{
+max-width:750px;
+margin:auto;
+background:white;
+padding:40px 25px;
+border-radius:28px;
+text-align:center;
+box-shadow:0 12px 30px rgba(0,0,0,.09);
+}
+
+.location-icon{
+font-size:55px;
+margin-bottom:15px;
+}
+
+.location p{
+font-size:19px;
+line-height:1.8;
+color:#555;
 }
 
 .contact{
-    background:linear-gradient(135deg,#063b57,#0b749d);
-    color:white;
-    text-align:center;
+background:linear-gradient(135deg,#063b57,#087da7);
+color:white;
+text-align:center;
 }
 
-.contact .section-title{
-    color:white;
+.contact .title{
+color:white;
 }
 
 .contact-box{
-    max-width:800px;
-    margin:auto;
-    background:white;
-    color:#173b59;
-    padding:40px 25px;
-    border-radius:30px;
-    box-shadow:0 15px 40px rgba(0,0,0,0.2);
+max-width:700px;
+margin:auto;
+background:white;
+color:#183b56;
+padding:40px 20px;
+border-radius:28px;
 }
 
 .contact-box p{
-    font-size:19px;
-    line-height:1.8;
-    margin:12px 0;
+font-size:18px;
+line-height:1.8;
+margin-bottom:20px;
 }
 
 .contact-btn{
-    display:inline-block;
-    margin:10px 5px;
-    padding:15px 25px;
-    border-radius:30px;
-    background:#075985;
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.map-btn{
-    background:#159447;
+display:inline-block;
+padding:14px 24px;
+margin:7px;
+border-radius:30px;
+background:#075985;
+color:white;
+text-decoration:none;
+font-weight:bold;
 }
 
 footer{
-    background:#082c40;
-    color:white;
-    text-align:center;
-    padding:25px 15px;
+background:#062c40;
+color:white;
+text-align:center;
+padding:30px 15px;
 }
 
 footer p{
-    margin:5px;
+margin:7px;
 }
 
-@media(max-width:600px){
+@media(max-width:650px){
 
-    nav{
-        padding:14px 5%;
-    }
+nav{
+padding:14px 4%;
+}
 
-    .logo{
-        font-size:18px;
-    }
+.logo{
+font-size:17px;
+}
 
-    nav a{
-        font-size:13px;
-        margin-left:8px;
-    }
+nav a{
+font-size:12px;
+margin-left:7px;
+}
 
-    .hero{
-        min-height:570px;
-    }
+.hero{
+min-height:600px;
+}
 
-    .hero h1{
-        font-size:40px;
-    }
+.hero h1{
+font-size:40px;
+}
 
-    .hero p{
-        font-size:19px;
-    }
+.hero h2{
+font-size:21px;
+}
 
-    .section-title{
-        font-size:34px;
-    }
+.hero-icon{
+font-size:65px;
+}
 
-    section{
-        padding:65px 5%;
-    }
+.title{
+font-size:32px;
+}
 
-    .card{
-        padding:40px 20px;
-    }
+section{
+padding:65px 5%;
+}
+
+.product-image{
+height:190px;
+}
+
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
-    <div class="logo">👓 Raj Eye Care Optics</div>
 
-    <div>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
-    </div>
+<div class="logo">
+👓 Raj Eye Care Optics
+</div>
+
+<div>
+<a href="#about">About</a>
+<a href="#products">Products</a>
+<a href="#services">Services</a>
+<a href="#contact">Contact</a>
+</div>
+
 </nav>
 
 
-<!-- HERO -->
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="glasses">👓</div>
+<div class="hero-icon">👓</div>
 
-        <h1>Raj Eye Care Optics</h1>
+<h1>Raj Eye Care Optics</h1>
 
-        <p>Your Vision, Our Care</p>
+<h2>Your Vision, Our Care</h2>
 
-        <a href="#products" class="btn">
-            Explore Products
-        </a>
+<p>
+Quality eyewear, stylish frames and optical
+solutions for your everyday vision needs.
+</p>
 
-        <a href="#contact" class="btn dark">
-            Contact Us
-        </a>
+<a href="#products" class="btn">
+Explore Products
+</a>
 
-    </div>
+<a href="#contact" class="btn dark">
+Contact Us
+</a>
+
+</div>
 
 </section>
 
 
-<!-- ABOUT -->
 <section id="about">
 
-    <h2 class="section-title">About Us</h2>
+<h2 class="title">About Us</h2>
 
-    <div class="about">
-
-        <p>
-            Welcome to <b>Raj Eye Care Optics</b>.
-            We provide quality eyewear and optical products
-            designed for comfort, style and everyday vision needs.
-        </p>
-
-        <p>
-            Our goal is to provide customers with a comfortable
-            and reliable eyewear experience.
-        </p>
-
-    </div>
+<p class="about">
+Welcome to <b>Raj Eye Care Optics</b>.
+We provide quality eyewear and optical products
+with a focus on comfort, style and everyday vision.
+Our goal is to make choosing eyewear simple and convenient.
+</p>
 
 </section>
 
 
-<!-- PRODUCTS -->
 <section id="products">
 
-    <h2 class="section-title">Our Products</h2>
+<h2 class="title">Featured Products</h2>
 
-    <div class="grid">
-
-        <div class="card">
-            <div class="card-icon">👓</div>
-            <h3>Eyeglasses</h3>
-            <p>
-                Stylish and comfortable frames
-                for everyday use.
-            </p>
-        </div>
+<div class="products">
 
 
-        <div class="card">
-            <div class="card-icon">🕶️</div>
-            <h3>Sunglasses</h3>
-            <p>
-                Trendy sunglasses for different
-                styles and occasions.
-            </p>
-        </div>
+<div class="product">
+
+<div class="product-image">
+👓
+</div>
+
+<div class="product-info">
+
+<h3>Eyeglasses</h3>
+
+<p>
+Comfortable and stylish frames
+for everyday use.
+</p>
+
+<a href="#contact" class="small-btn">
+Enquire Now
+</a>
+
+</div>
+
+</div>
 
 
-        <div class="card">
-            <div class="card-icon">👁️</div>
-            <h3>Contact Lenses</h3>
-            <p>
-                Comfortable contact lenses
-                for your daily vision needs.
-            </p>
-        </div>
+<div class="product">
 
-    </div>
+<div class="product-image">
+🕶️
+</div>
+
+<div class="product-info">
+
+<h3>Sunglasses</h3>
+
+<p>
+Trendy designs for a stylish
+everyday look.
+</p>
+
+<a href="#contact" class="small-btn">
+Enquire Now
+</a>
+
+</div>
+
+</div>
+
+
+<div class="product">
+
+<div class="product-image">
+👁️
+</div>
+
+<div class="product-info">
+
+<h3>Contact Lenses</h3>
+
+<p>
+Comfortable optical solutions
+for your daily needs.
+</p>
+
+<a href="#contact" class="small-btn">
+Enquire Now
+</a>
+
+</div>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- SERVICES -->
 <section id="services" class="services">
 
-    <h2 class="section-title">Our Services</h2>
+<h2 class="title">Our Services</h2>
 
-    <div class="grid">
-
-        <div class="card">
-            <div class="card-icon">🔍</div>
-            <h3>Eye Testing</h3>
-            <p>
-                Eye testing and vision care
-                services for your needs.
-            </p>
-        </div>
+<div class="products">
 
 
-        <div class="card">
-            <div class="card-icon">👓</div>
-            <h3>Frame Selection</h3>
-            <p>
-                Choose comfortable and stylish
-                frames according to your preference.
-            </p>
-        </div>
+<div class="service">
+
+<div class="service-icon">🔍</div>
+
+<h3>Eye Testing</h3>
+
+<p>
+Professional eye testing and
+vision care services.
+</p>
+
+</div>
 
 
-        <div class="card">
-            <div class="card-icon">✨</div>
-            <h3>Lens Solutions</h3>
-            <p>
-                Optical lens solutions designed
-                for everyday vision.
-            </p>
-        </div>
+<div class="service">
 
-    </div>
+<div class="service-icon">👓</div>
+
+<h3>Frame Selection</h3>
+
+<p>
+Choose frames that match your
+comfort and style preferences.
+</p>
+
+</div>
+
+
+<div class="service">
+
+<div class="service-icon">✨</div>
+
+<h3>Lens Solutions</h3>
+
+<p>
+Optical lens solutions for
+your everyday vision needs.
+</p>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- CONTACT -->
+<section>
+
+<h2 class="title">Visit Our Store</h2>
+
+<div class="location">
+
+<div class="location-icon">
+📍
+</div>
+
+<p>
+<b>Nashik, Ashoknagar</b><br>
+Bhaji Market, Nagre Chowk
+</p>
+
+<br>
+
+<a
+class="small-btn"
+href="https://www.google.com/maps/search/?api=1&query=Nashik+Ashoknagar+Bhaji+Market+Nagre+Chowk"
+target="_blank">
+Open in Google Maps
+</a>
+
+</div>
+
+</section>
+
+
 <section id="contact" class="contact">
 
-    <h2 class="section-title">Contact Us</h2>
+<h2 class="title">Get In Touch</h2>
 
-    <div class="contact-box">
+<div class="contact-box">
 
-        <p><b>📍 Address</b></p>
+<p>
+Have questions about eyewear or optical products?
+Feel free to visit our store.
+</p>
 
-        <p>
-            Nashik, Ashoknagar,<br>
-            Bhaji Market, Nagre Chowk
-        </p>
+<a
+href="#"
+class="contact-btn">
+📞 Call Us
+</a>
 
+<a
+href="#"
+class="contact-btn">
+💬 WhatsApp
+</a>
 
-        <!-- CALL BUTTON -->
-        <!-- Yaha shop ka asli number baad me add karna -->
+<p style="font-size:14px;color:#777;margin-top:20px;">
+Contact number will be added after shop-owner permission.
+</p>
 
-        <a
-            href="tel:+91XXXXXXXXXX"
-            class="contact-btn">
-            📞 Call Now
-        </a>
-
-
-        <!-- WHATSAPP BUTTON -->
-        <!-- Yaha bhi asli WhatsApp number add karna -->
-
-        <a
-            href="https://wa.me/91XXXXXXXXXX"
-            class="contact-btn">
-            💬 WhatsApp
-        </a>
-
-
-        <!-- MAP BUTTON -->
-
-        <a
-            href="https://www.google.com/maps/search/?api=1&query=Raj+Eye+Care+Optics+Ashoknagar+Bhaji+Market+Nagre+Chowk+Nashik"
-            target="_blank"
-            class="contact-btn map-btn">
-            📍 View Location
-        </a>
-
-    </div>
+</div>
 
 </section>
 
 
-<!-- FOOTER -->
 <footer>
 
-    <p><b>Raj Eye Care Optics</b></p>
+<p><b>Raj Eye Care Optics</b></p>
 
-    <p>Your Vision, Our Care</p>
+<p>Your Vision, Our Care</p>
 
-    <p>
-        📍 Nashik • Ashoknagar • Bhaji Market • Nagre Chowk
-    </p>
+<p>📍 Nashik • Ashoknagar • Bhaji Market • Nagre Chowk</p>
 
 </footer>
 
